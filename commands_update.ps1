@@ -9,7 +9,8 @@ $AKS_NAME="bipeenclus01"
 az aks create -g $AKS_RG -n $AKS_NAME `
               --kubernetes-version "1.25.2" `
               --enable-managed-identity `
-              --node-count 2 `
+              --node-count 1 `
+              --generate-ssh-keys `   
               --network-plugin azure
 
 # Connect to the cluster
